@@ -1,16 +1,7 @@
 package br.com.projformulario;
 
-import java.io.IOException;
-import javax.servlet.ServletException;
-import javax.servlet.annotation.WebServlet;
-import javax.servlet.http.HttpServlet;
-import javax.servlet.http.HttpServletRequest;
-import javax.servlet.http.HttpServletResponse;
+public class Formulario  {
 
-
-@WebServlet("/ServFormulario")
-public class ServFormulario extends HttpServlet {
-	private static final long serialVersionUID = 1L;
        
 	int tipoPessoa; //1 fisica - 2 juridica
 	String cnpjCpf;
@@ -19,15 +10,15 @@ public class ServFormulario extends HttpServlet {
 	String end;
 	String comp;
 	String cidade;
-	String estado;
+	Estado estado;
 	String cep;
 	String email;
 	String confEmail;
 	String senha;
 	
 	
-    public ServFormulario(int tipoPessoa, String cnpjCpf, String nome, String dataNasc, String end, String comp,
-			String cidade, String estado, String cep, String email, String confEmail, String senha) {
+    public Formulario(int tipoPessoa, String cnpjCpf, String nome, String dataNasc, String end, String comp,
+			String cidade,Estado estado, String cep, String email, String confEmail, String senha) {
 		super();
 		this.tipoPessoa = tipoPessoa;
 		this.cnpjCpf = cnpjCpf;
@@ -43,7 +34,7 @@ public class ServFormulario extends HttpServlet {
 		this.senha = senha;
 	}
 
-	public ServFormulario() {
+	public Formulario() {
         super();
         
     }
@@ -118,12 +109,12 @@ public class ServFormulario extends HttpServlet {
 	}
 
 
-	public String getEstado() {
+	public Estado getEstado() {
 		return estado;
 	}
 
 
-	public void setEstado(String estado) {
+	public void setEstado(Estado estado) {
 		this.estado = estado;
 	}
 
@@ -167,21 +158,5 @@ public class ServFormulario extends HttpServlet {
 		this.senha = senha;
 	}
 
-
-	public static long getSerialversionuid() {
-		return serialVersionUID;
-	}
-
-
-	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		
-		
-	}
-
-
-	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		
-		
-	}
 
 }

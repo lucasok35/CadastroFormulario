@@ -8,16 +8,31 @@
 </head>
 <body>
 
-<form action="">
-
-<div class="btn-group btn-group-toggle" data-toggle="buttons">
-  <label class="btn btn-secondary active">
-    <input type="radio" name="options" id="option1" autocomplete="off" checked> Fisica
-  </label>
-  <label class="btn btn-secondary">
-    <input type="radio" name="options" id="option2" autocomplete="off"> Juridica
-  </label>
-</div>
+<form	action="ServFormulario" method="post">
+					<input type="radio" name="options"  id="option1" autocomplete="off" checked>Física
+					<input type="radio" name="options" id="option2" autocomplete="off" checked>Jurídica <br>
+					
+					CNPJ/CPF: <input type="text" name="CNPJ/CPF" /><br />
+					Nome:	<input	type="text" name="nome"	/><br	/>
+					Data Nasc.:	<input	type="text" name="datanascimento"	/><br	/>
+					Endereço:	<input	type="text" name="endereco"	/><br	/>
+					Complemento:	<input	type="text" name="complemento"	/><br	/>
+					Cidade:	<input	type="text" name="cidade"	/><br	/>
+					Estado:	<select	classe="form-control" id="estado"	>
+					<option>AM</option>
+					<option>BA</option>
+					<option>CE</option>
+					<option>ES</option>
+					</select>
+					CEP:<input type="text" name="cep" /><br>
+					E-mail:	<input	type="text" name="email"	/><br>
+					<font  color="red"> Não indique e-mail que possua bloqueio para mensagens automáticas (anti-SPAM)</font><br>
+					<!--  >h5 style="color:red;">Não</h5>!-->
+					Endereço:	<input	type="text" name="endereco"	/><br	/>
+					Data	Nascimento:	<input	type="text" name="dataNascimento"	/><br	/>
+					<input	type="submit" value="Salvar"	/>
 </form>
+
+
 </body>
 </html>
